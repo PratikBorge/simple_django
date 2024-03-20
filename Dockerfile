@@ -17,4 +17,4 @@ RUN pip install django==3.2 django-haystack==3.0
 RUN /usr/bin/python3 manage.py makemigrations
 RUN /usr/bin/python3 manage.py migrate
 EXPOSE 8001
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["/usr/bin/python3", "manage.py", "runserver", "0.0.0.0:8001"]
