@@ -10,6 +10,7 @@ RUN virtualenv ./envs/
 RUN . envs/bin/activate
 RUN git clone https://github.com/PratikBorge/simple-django-project.git
 WORKDIR /simple-django-project/
+RUN apt-get install python3-dev default-libmysqlclient-dev
 RUN pip install -r requirements.txt
 RUN python manage.py makemigrations
 RUN python manage.py migrate
