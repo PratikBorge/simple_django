@@ -16,6 +16,5 @@ RUN pip install mysql-connector-python
 RUN pip install django==3.2 django-haystack==3.0
 RUN /usr/bin/python3 manage.py makemigrations
 RUN /usr/bin/python3 manage.py migrate
-RUN /usr/bin/python3 manage.py rebuild_index
 EXPOSE 8001
 CMD python manage.py runserver 0:8001
