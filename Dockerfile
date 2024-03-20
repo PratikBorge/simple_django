@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 LABEL engg="pratik"
 
 USER root
-RUN apt install -y python-3.7.2 python-pip git
+RUN apt install -y python3.7.2 python-pip git
 RUN pip install virtualenv
 RUN mkdir envs
 RUN virtualenv ./envs/
